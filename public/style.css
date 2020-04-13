@@ -375,3 +375,17 @@ body {
 .fade-enter-active {
     transition: opacity 0.5s;
 }
+
+/* App Loading */
+[v-cloak] > * {
+    display: none;
+}
+
+[v-cloak] > #loading {
+    display: block;
+    padding: 1em;
+}
+
+#loading {
+    display: none;
+}

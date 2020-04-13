@@ -50,7 +50,7 @@ new Vue({
 			let path = "/search?q=".concat(this.search);
 			this.$http.get(path)
 				.then(function (response) {
-					this.results = response.body;	
+					this.results = response.body;
 					this.lastSearch = this.search;
 					this.appendResults();
 					this.loading = false;
@@ -58,8 +58,8 @@ new Vue({
 		},
 		appendResults: function () {
 			if (this.products.length < this.results.length) {
-				var toAppend = this.results.slice(this.products.length, LOAD_NUM + this.products.length);	
-				this.products = this.products.concat(toAppend);			
+				var toAppend = this.results.slice(this.products.length, LOAD_NUM + this.products.length);
+				this.products = this.products.concat(toAppend);
 			}
 		}
 	},
@@ -84,4 +84,3 @@ new Vue({
 	}
 }
 );
-
